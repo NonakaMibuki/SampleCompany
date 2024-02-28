@@ -1,0 +1,570 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    color: inherit
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+/* 全体 */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #333;
+}
+
+.contents {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 55px;
+}
+
+/* ヘッダー */
+
+header {
+    display: flex;
+    position: relative;
+}
+
+header h1 {
+    width: 264px;
+    height: 115px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 a img {
+    width: 176px;
+    height: 25px;
+    line-height: 25px;
+}
+
+header nav {
+    margin-left: 85px;
+}
+
+
+header nav ul {
+    display: flex;
+    position: absolute;
+    top: 55%;
+}
+
+header nav ul li {
+    width: 180px;
+    text-align: center;
+    height: 50px;
+    border-left: 1px solid #CCC;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+header nav ul li:last-child {
+    border-right: 1px solid #CCC;
+}
+
+
+header ul li a {
+    display: block;
+    padding: 5px 45px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: 0.5s;
+
+}
+
+header ul li a:hover{
+    border-bottom: 3px solid #000;
+    transition: 0.5s;
+}
+
+
+header ul li a span {
+    font-size: 12px;
+    color: #999;
+    font-weight: 200;
+}
+
+
+/* トップページスライドショー */
+
+.top-page {
+    margin-top: 30px;
+    margin-bottom: 300px;
+}
+
+.slider-items {
+    width: 100%;
+    position: relative;
+}
+
+.slider-items img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+/* メイン */
+
+main {
+    order: 2;
+    width: 70%;
+    padding-left: 55px;
+}
+
+main h2 {
+    background: #000 url(./img/mark1.png) no-repeat 10px center;
+    color: #FFF;
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 35px;
+    letter-spacing: 0.1em;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+table {
+    margin: 15px 0;
+}
+
+.sidebar {
+    order: 1;
+    width: 23%;
+}
+
+#contents__table--header {
+    padding: 12px 20px;
+    width: auto;
+    display: block;
+    height: 42px;
+    background-color: #404040;
+    color: #FFF;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+table{
+    width: 100%;
+}
+
+table tbody tr {
+    border: 1px solid #CCC;
+}
+
+table tbody th {
+    width: 25%;
+    padding: 14px;
+    background: #F0F0F0;
+    border-right: 1px solid #CCC;
+}
+
+table tbody td {
+    padding-left: 15px;
+    width: 75%;
+    font-weight: 200;
+}
+
+main h3 {
+    background: linear-gradient(#FFF, #ebebeb);
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+    letter-spacing: 0.1em;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #CCC;
+}
+
+
+main p {
+    line-height: 2;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    padding: 0 12px;
+    padding-bottom: 15px;
+}
+
+.summary__p--txt {
+    padding-bottom: 13px;
+}
+
+.look {
+    background-color: #666666;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* TOPページ　news */
+
+.new-icon {
+    position: relative;
+    color: #FFF;
+    width: 30px;
+    height: 10px;
+    background-color: red;
+    font-size: 10px;
+    padding: 0 5px;
+    border-radius: 2px;
+}
+
+dl {
+    width: 100%;
+    margin:0 15px 0 12px;
+    height: 145px;
+    overflow: scroll;
+}
+
+dt {
+    float: left;
+    font-weight: bold;
+    padding: 7px 0;
+    border-bottom: 1px solid #CCC;
+}
+
+dd {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 0 7px 120px;
+    border-bottom: 1px solid #CCC;
+}
+
+
+/* サービスページ */
+
+.service-list {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(#FFF, #ebebeb);
+    border: 1px solid #CCC;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.service-list a {
+    text-decoration: none;
+}
+
+h4 {
+    border-left: 3px solid #333;
+    padding: 0 10px;
+}
+
+
+.service-list img {
+    width: 20%;
+    border: 1px solid #CCC;
+    padding: 1%;
+    background-color: #FFF;
+    height: auto;
+    margin-right: 12px;
+}
+
+hr {
+    margin: 8px 0;
+}
+
+.list-items {
+    display: flex;
+    align-items: flex-start;
+}
+
+.list-table {
+    width: 75%;
+    margin: 0;
+}
+
+.list-table th {
+    width: 16%;
+    text-align: center;
+    height: 20px;
+    padding: 8px;
+    line-height: 20px;
+    font-weight: 300;
+    font-size: 12px;
+    background-color: #DFE0C9;
+}
+
+.list-table td {
+    width: 24%;
+    height: 20px;
+    padding: 8px;
+    font-size: 12px;
+    border-right:1px solid #CCC;
+}
+
+.service-list p {
+    margin-left: 22%;
+}
+
+
+/* サイドバー */
+
+.box1 {
+    background: #E4E4E4;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border: 1px solid #CCC;
+}
+
+.box1 ul {
+    background: #FFF;
+    margin: 10px 20px;
+}
+
+.box1 li {
+    padding: 10px;
+    border-bottom: 0.5px solid #CCC;
+}
+
+.box1 li:last-child {
+    border-bottom: none;
+}
+
+.box1 a {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.box1 h2 {
+    margin: 12px 0 12px 20px;
+    border-left: 3px solid #333;
+    padding: 0 10px;
+}
+
+.box1 p {
+    margin: 10px 20px;
+    line-height: 2;
+    font-size: 13px;
+}
+
+.box2 h2 {
+    margin: 12px 0 12px 0;
+    border-left: 3px solid #333;
+    padding: 0 10px;
+}
+
+.box2 p {
+    margin: 10px 20px 10px 0;
+    line-height: 2;
+    font-size: 13px;
+
+}
+
+/* footer */
+
+footer {
+    background: #000;
+    color: #FFF;
+    height: 50px;
+    text-align: center;
+    font-size: 11px;
+}
+
+footer small {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+footer a {
+    text-decoration: none;
+    transition: all 0.5s 0.1s ease-in-out;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+/* ページトップに戻るボタン */
+
+.page-top {
+    display: inline-block;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.page-top a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: #000;
+    color: #FFF;
+    font-size: 10px;
+  }
+
+  .page-top a:hover{
+    background-color: #666666;
+  }
