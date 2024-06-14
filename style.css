@@ -188,8 +188,8 @@ header {
 }
 
 header h1 {
-    width: 264px;
-    height: 115px;
+    width: 16rem;
+    height: 7rem;
     background-color: #000;
     display: flex;
     align-items: center;
@@ -197,9 +197,12 @@ header h1 {
 }
 
 header h1 a img {
-    width: 176px;
-    height: 25px;
-    line-height: 25px;
+    width: 11rem;
+    height: auto;
+}
+
+#drawer_toggle {
+    display: none;
 }
 
 header nav {
@@ -249,6 +252,138 @@ header ul li a span {
     font-weight: 200;
 }
 
+@media (max-width:768px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        width: 12rem;
+        height: 4rem;
+    }
+
+    header h1 a img {
+        width: 8rem;
+    }
+
+    .contents {
+        display: block;
+        width: 100%;
+        padding-top: 0;
+        margin-top: 30px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #drawer_toggle {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        margin: 10px 15px;
+        width: 33px;
+        height: 25px;
+        z-index: 999;
+    }
+
+    #drawer_toggle span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        height: 4px;
+        border-radius: 3px;
+        background: #333;
+        width: 100%;
+    }
+
+    #drawer_toggle span:nth-of-type(1) {
+        top: 5px;
+    }
+
+    #drawer_toggle span:nth-of-type(2) {
+        top: 17px;
+    }
+
+    #drawer_toggle span:nth-of-type(3) {
+        top: 29px;
+    }
+
+    #drawer_toggle.active span:nth-of-type(1) {
+        top: 5px;
+        left: 6px;
+        transform: translateY(10px) rotate(-45deg);
+        width: 100%;
+        background-color: #333;
+    }
+
+    #drawer_toggle.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    #drawer_toggle.active span:nth-of-type(3) {
+        top: 25px;
+        left: 6px;
+        transform: translateY(-10px) rotate(45deg);
+        width: 100%;
+        background-color: #333;
+    }
+
+        nav#global_nav {
+        display: block;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 997;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .3s linear;
+    }
+
+    nav#global_nav.active {
+        top: 0;
+        opacity: 0.95;
+        pointer-events: auto;
+        position: fixed;
+    }
+
+    nav#global_nav ul {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        width: 100%;
+        transform: translate(-50%, -75%);
+        text-align: center;
+    }
+
+    nav#global_nav ul li {
+        text-align: center;
+        margin: 25px 0;
+        border-left: none;
+    }
+
+    header nav ul li:last-child {
+        border-right: none;
+    }
+
+    nav#global_nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem;
+        padding: 5px 40px;
+    }
+
+
+}
+
 
 /* トップページスライドショー */
 
@@ -271,6 +406,39 @@ header ul li a span {
 }
 
 
+@media (max-width:768px) {
+
+    .top-page {
+        margin-bottom: 150px;
+    }
+
+    main {
+        width: 93% !important;
+        margin: 0 auto !important;
+        padding-left: 0 !important;
+        font-size: 14px
+    }
+
+    main h2 {
+        font-size: 0.8rem;
+    }
+
+    main h3 {
+        font-size: 0.85rem;
+        height: auto;
+
+    }
+
+    main p {
+        font-size: 0.8rem;
+    }
+
+    .sidebar {
+        width: 92% !important;
+        margin: 50px auto 10px;
+    }
+}
+
 
 /* メイン */
 
@@ -286,7 +454,7 @@ main h2 {
     width: 100%;
     height: 34px;
     line-height: 34px;
-    padding: 0 35px;
+    padding: 0 0 0 35px;
     letter-spacing: 0.1em;
     box-sizing: border-box;
     margin-bottom: 15px;
@@ -318,6 +486,8 @@ table {
 
 table tbody tr {
     border: 1px solid #CCC;
+    display: flex;
+    align-items: center;
 }
 
 table tbody th {
@@ -336,9 +506,8 @@ table tbody td {
 main h3 {
     background: linear-gradient(#FFF, #ebebeb);
     width: 100%;
-    height: 32px;
-    line-height: 32px;
-    padding: 0 12px;
+    height: auto;
+    padding: 10px 12px;
     letter-spacing: 0.1em;
     box-sizing: border-box;
     margin-bottom: 15px;
@@ -398,15 +567,25 @@ dd {
     border-bottom: 1px solid #CCC;
 }
 
+@media (max-width:768px) {
+    dl {
+        width: 92%;
+    }
+
+    dt, dd {
+        font-size: 0.8rem;
+    }
+}
+
 
 /* サービスページ */
 
 .service-list {
     width: 100%;
-    height: 200px;
+    height: auto;
     background: linear-gradient(#FFF, #ebebeb);
     border: 1px solid #CCC;
-    padding: 25px;
+    padding: 25px 25px 15px;
     margin-bottom: 25px;
     box-sizing: border-box;
 }
@@ -440,12 +619,12 @@ hr {
 }
 
 .list-table {
-    width: 75%;
+    width: 100%;
     margin: 0;
 }
 
 .list-table th {
-    width: 16%;
+    width: 25%;
     text-align: center;
     height: 20px;
     padding: 8px;
@@ -456,7 +635,7 @@ hr {
 }
 
 .list-table td {
-    width: 24%;
+    width: 75%;
     height: 20px;
     padding: 8px;
     font-size: 12px;
@@ -465,6 +644,10 @@ hr {
 
 .service-list p {
     margin-left: 22%;
+}
+
+@media (max-width:768px) {
+
 }
 
 
@@ -483,7 +666,6 @@ hr {
 }
 
 .box1 li {
-    padding: 10px;
     border-bottom: 0.5px solid #CCC;
 }
 
@@ -492,6 +674,8 @@ hr {
 }
 
 .box1 a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
     font-size: 13px;
 }
@@ -579,19 +763,21 @@ footer a:hover {
 
 .contact-form th,
 .contact-form td {
-    padding: 10px;
-    border: 1px solid #ccc;
+    /* padding: 10px; */
     vertical-align: middle;
     text-align: left;
 }
 
 .contact-form th {
     width: 25%;
+    font-size: 0.75rem;
+    height: 100%;
     text-align: left;
 }
 
 .contact-form td {
     width: 75%;
+    height: 100%;
 }
 
 input {
@@ -599,12 +785,19 @@ input {
     box-sizing: border-box;
 }
 
+.contact-form .textarea-box th {
+    height: 11rem;
+    line-height: 11rem;
+    
+}
+
 .contact-form .textarea-box textarea {
-    width: 100%;
+    width: 95%;
     box-sizing: border-box;
 }
 
 textarea {
+    margin: 10px auto;
     vertical-align: middle;
 }
 
@@ -613,21 +806,21 @@ textarea {
 }
 
 .contact-btn a {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	width: 120px;
-	margin: auto;
-	padding: 1rem 4rem;
-	font-weight: bold;
-	background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
-	border-radius: 100vh;
-	color: #333;
-	border: 1px solid #999;
-	text-shadow: 0 1px #fff;
-	box-shadow: 0 0 2px 1px #fcfcfc, 0 4px 6px #cecfd1, 0 -2px 2px #cecfd1, 0 -4px 2px #eee, inset 0 0 2px 2px #cecfd1;
-	transition: 0.5s;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 120px;
+    margin: auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 100vh;
+    color: #333;
+    border: 1px solid #999;
+    text-shadow: 0 1px #fff;
+    box-shadow: 0 0 2px 1px #fcfcfc, 0 4px 6px #cecfd1, 0 -2px 2px #cecfd1, 0 -4px 2px #eee, inset 0 0 2px 2px #cecfd1;
+    transition: 0.5s;
 }
 
 .contact-btn a:hover {
@@ -652,4 +845,11 @@ dl.question-box dd {
     padding: 15px 0;
     font-size: 0.95rem;
     line-height: 1.6;
+}
+
+@media (max-width:768px) {
+ 
+    .question-box {
+        margin-bottom: 500px;
+    }
 }

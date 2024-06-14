@@ -15,7 +15,12 @@
             <h1>
                 <a href="top.html"><img src="./img/logo.png" alt="Sample Companyロゴ画像"></a>
             </h1>
-            <nav>
+            <div id="drawer_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <nav  id="global_nav">      
                 <ul>
                     <li><a href="info.html">会社概要<span>Company</span></a></li>
                     <li><a href="service.html">サービス紹介<span>Service</span></a></li>
@@ -41,7 +46,7 @@
                                 <td><input type="email" name="メールアドレス"></td>
                             </tr>
                             <tr class="textarea-box">
-                                <th>お問い合わせ詳細 ※</th>
+                                <th>お問い合わせ</th>
                                 <td><textarea name="お問い合わせ" rows="9"></textarea><!-- /# --></td>
                             </tr>
                         </tbody>
@@ -87,6 +92,8 @@
             》
         </span>
     </footer>
+    <script src="./jquery-3.7.1.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
