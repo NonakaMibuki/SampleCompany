@@ -237,7 +237,7 @@ header ul li a {
 
 }
 
-header ul li a:hover{
+header ul li a:hover {
     border-bottom: 3px solid #000;
     transition: 0.5s;
 }
@@ -312,7 +312,7 @@ table {
     font-size: 15px;
 }
 
-table{
+table {
     width: 100%;
 }
 
@@ -379,7 +379,7 @@ main p {
 
 dl {
     width: 100%;
-    margin:0 15px 0 12px;
+    margin: 0 15px 0 12px;
     height: 145px;
     overflow: scroll;
 }
@@ -407,6 +407,7 @@ dd {
     background: linear-gradient(#FFF, #ebebeb);
     border: 1px solid #CCC;
     padding: 25px;
+    margin-bottom: 25px;
     box-sizing: border-box;
 }
 
@@ -459,7 +460,7 @@ hr {
     height: 20px;
     padding: 8px;
     font-size: 12px;
-    border-right:1px solid #CCC;
+    border-right: 1px solid #CCC;
 }
 
 .service-list p {
@@ -563,8 +564,92 @@ footer a:hover {
     background: #000;
     color: #FFF;
     font-size: 10px;
-  }
+}
 
-  .page-top a:hover{
+.page-top a:hover {
     background-color: #666666;
-  }
+}
+
+/* お問い合わせページ */
+
+.contact-form {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-form th,
+.contact-form td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.contact-form th {
+    width: 25%;
+    text-align: left;
+}
+
+.contact-form td {
+    width: 75%;
+}
+
+input {
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.contact-form .textarea-box textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    vertical-align: middle;
+}
+
+.contact-btn {
+    margin-top: 40px;
+}
+
+.contact-btn a {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+	border-radius: 100vh;
+	color: #333;
+	border: 1px solid #999;
+	text-shadow: 0 1px #fff;
+	box-shadow: 0 0 2px 1px #fcfcfc, 0 4px 6px #cecfd1, 0 -2px 2px #cecfd1, 0 -4px 2px #eee, inset 0 0 2px 2px #cecfd1;
+	transition: 0.5s;
+}
+
+.contact-btn a:hover {
+    opacity: 0.5;
+}
+
+dl.question-box {
+    overflow: visible;
+}
+
+dl.question-box dt {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+dl.question-box dd {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
